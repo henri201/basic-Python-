@@ -28,3 +28,34 @@ slicing a string [start index : end index] # does stops before the end   ## you 
 .upper() #to upper case a string .lower()
 
 print(f"the sum of {x} and {y} is {sum}")  # f formating , like ${} in javascript
+
+list.append(content)  # adding something to the back of a list
+list.insert(index, content) #inserting to a list
+list.extend(list) # addign 2 lists together
+list.pop(content) # removes and returns popped item, leave it empty to get the last element
+list.clear() #clear a list
+list.count(content)  # returns the number of times a value appears in a list
+list.sort()  # sort your list
+list.reverse() # reverses the elments in a list
+
+age [13,11,12,34,67,85]
+list.sort(reverse=True)
+#comes out larger to smaller sorted
+
+
+ages (12, 34, 56, 67) #ordered, unchangeable, 
+___________________________________________________________________________________________________________________________________________
+
+#FOR LOOP
+numbers = [1, 23, 4, 5, 63, 2]
+numbersCube = []
+for i in numbers:
+    numbersCube.append(i**2)   # prints squeare rooted list
+    
+    
+numbersCube = [i**2 for i in numbers] # shortened syntax
+numbersCube = [i**2 for i in numbers if i % 2 == 0]  # only brings out divideable by 2
+
+_________________________________________________________________________________________________________-__________
+
+
