@@ -21,7 +21,7 @@ len() #returns the length of the string
 
 .count()  # how many times it appears
 
-slicing a string [start index : end index] # does stops before the end   ## you can also have [4:] from 4th to the end, [:4] from 0 to 4th
+.slice(start index, stop index, step) # does stops before the end   ## you can also have [4:] from 4th to the end, [:4] from 0 to 4th
 
 'string you want to check' in variableName  #check if a variable is in a string  ## can also use   not in
 
@@ -56,6 +56,173 @@ for i in numbers:
 numbersCube = [i**2 for i in numbers] # shortened syntax
 numbersCube = [i**2 for i in numbers if i % 2 == 0]  # only brings out divideable by 2
 
+pass # to put loop on pause , not to execute
+
 _________________________________________________________________________________________________________-__________
 
+#IN LOOP
 
+numbers = [1, 23, 4, 5, 63, 2]
+print(23 in numbers) # returns true
+______________________________________________________________________________________________________________________
+#SETS
+set.update(set2)   # to add 2 sets together
+
+
+fruits = {'bananas', 'beet', 'carrots'}
+fruits.remove('bananas')
+print(fruits) # removes bananas, returns an error if the item does not exist,
+.discard() # same as remove, but doesnt return an error
+.pop() # removes the last element
+
+set1.intersection(set2) # brings out items that are in both sets
+set1.symmetric_difference(set2) # brings out items that are not in both lists
+set1.difference(set2) # set1 - intersection(set1, set2)
+set1.isdisjoint(set2) # check if 2 have common elements
+
+_______________________________________________________________________________________________________
+
+#DICTIONARY
+# stored in key:value pair
+
+______________________________________________________________
+#CLASS 14.05.2022
+
+phone_book = {
+    'john': 57464748,
+    'doe': 4555746464,
+    'jane': 297632947,
+}
+# accessing items of a dict
+print(phone_book['john'])
+# second value is returned if the second value does not exist
+print(phone_book.get('does', 'no value'))
+
+
+# all keys in dict => .keys()
+print(phone_book.keys())
+
+# all values => .values()
+print(phone_book.values())
+
+# all items => .items()
+print(phone_book.items())
+
+# changing a key value
+phone_book['jane'] = 777777
+print(phone_book)
+
+# update, if the key does not exist, it adds it
+phone_book.update({'jane': 64367846})
+
+# check if a key exists
+print('john' in phone_book)
+print(phone_book)
+
+
+# removing items
+    #pop() method
+phone_book.pop('john')
+print(phone_book)
+
+    #popitem() removes the last inserted item
+phone_book.popitem()
+
+
+# looping for
+
+for x in phone_book:
+    print(f"{x} number is {phone_book[x]}")
+
+# only looping through values
+for x in phone_book.values():
+    print(x)
+
+
+# remove all duplicate words in a string
+word = " python is a great language c is also a great language"
+word_split = word.split(" ")
+#set
+set_word = set(word_split)
+new_word = ' '.join(set_word)
+print(new_word)
+
+#dict
+new_dict = dict.fromkeys(word_split)
+new_word = ' '.join(new_dict)
+
+# counter look pyhton docs
+c = Counter(word_split)
+new_word = ' '.join(ckeys())
+print(new_word)
+
+# WHILE conditional statement, break = stops current execution and the loop
+i = 1
+while i < 20:
+    print(f"{i} : {i ** 2}")
+    if i == 9:
+        break
+    i += 2
+______________________________________________________________________________________________________________
+#CLASS 15.05.2022
+
+# FUNCTIONS
+def <<function_name>> (argument):
+    statements
+    
+    
+def area_of_rectangle (length=5, breadth=10):   # uses default parameters if nothing new is passed in
+    print(f"length is {length}, breadth is {breadth} and are is {length * breadth}")
+
+# ARGS
+
+def sum_in_numbers (*args):     # takes in any number of arguments
+    sum = 0
+    for val in args:
+        sum += val
+    return sum
+
+# KWARGS
+
+def ingredient_for_omlette (**kwargs):
+    for key, val in kwargs.items():
+        print(f"added {val}: {key}")
+
+ingredient_for_omlette(eggs = 4, carrots = 2, cheese = 3, onions = 1)
+
+
+# area of 4 sided shapes
+# square = l*l
+# rectangle = L*b
+# after argument you can put type :typeOfValue
+def area_of_square(len):
+    return len ** 2
+
+def area_of_rectangle(len , br):
+    return len * br
+
+def area_of_quadrilateral (length:float = 10, breadth:float = 10):
+    if length == breadth:
+        return area_of_square(length)
+    else:
+        return area_of_rectangle(length, breadth)
+
+print(area_of_quadrilateral(5, 7))
+
+
+'''
+ MODULES
+    *.py extension
+    import                     # importing code from another file, afetr importing you can use it freely
+    
+import module_name
+import module_name as new_name #import numpy as np
+from <<module>> import <<function/class>>
+from <<module>> import . #import all
+
+from math import sqrt , factorial
+
+
+'''
+
+_____________________________________________________________________________________________________________________________________
