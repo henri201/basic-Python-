@@ -44,6 +44,8 @@ list.sort(reverse=True)
 
 
 ages (12, 34, 56, 67) #ordered, unchangeable, 
+
+pass - do nothing
 ___________________________________________________________________________________________________________________________________________
 
 #FOR LOOP
@@ -226,3 +228,42 @@ from math import sqrt , factorial
 '''
 
 _____________________________________________________________________________________________________________________________________
+
+#CLASS 21.05.2022
+
+#OBJECT ORIENTED PROGRAMMING
+
+'''
+a class is a blueprint/template for creating objects
+    - specify atributes (default values)
+    - specify the behaviour
+    
+CAR = class
+-min of 2 doors, max of 4
+-4 wheels
+- 2 front , 2 back lights
+
+classes have a contructor: special method  __init__
+
+'''
+
+class Car:
+    NAME = None  #class variable
+    doors = 0  #class variable
+    
+    def __init__(self, name_of_car:str, no_of_doors:int):
+        self.NAME = NAME_OF_CAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
