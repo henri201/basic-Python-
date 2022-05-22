@@ -253,10 +253,54 @@ class Car:
     
     def __init__(self, name_of_car:str, no_of_doors:int):
         self.NAME = NAME_OF_CAR
+ 
+
+#getters and setters, class ( privacy levels in a class)
+
+________________________________________________________________________________________________________________________________
+
+#CLASS 22.05.2022
 
 
+file handling
+create, read, update, delete
 
+open() function
+-parameters - filename an the mode
+ r => read, open a file for reading
+ a => append, open a file for appending
+ w => write, open a file for writing, overwrites the file
+ x => create, create a file 
+ t => text mode(default)
+ b => binary mode
+ 
+ 
+ methods:
+ - read(): returns the whole content of a file by default
+ - read(number): reads the number of files specified
+ - readline()
+ - write() : writes to a file
+ 
+ 
+ 
+'''
+f_write = open ("text1.txt", 'w')
+f_write.write("its a wonderful day")
+f_write.close()
 
+f_append = open("text1.txt", "a")
+f_append.write("\nthe sun is shining and the...")
+f_append.close()
+
+f = open("text1.txt", "r")
+while True:
+    line = f.readline()
+    if not line:
+        break
+    print(line.rstrip('\n'))
+
+if os.path.exists("text.xlsx"):
+    os.remove("fileName") #deletes the file
 
 
 
