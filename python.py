@@ -304,9 +304,12 @@ if os.path.exists("text.xlsx"):
 
 
 
+__________________________________________________________________________________________________________________________________________
+29.05.2022
 
-
-
+ #IMPORTING FROM MODULE, PACKAGES
+  
+ from <<fiel name>> import <<what you want to import (* => to import all)>> 
 
 
 
